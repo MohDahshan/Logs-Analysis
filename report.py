@@ -46,4 +46,3 @@ print ("\n  days had more than 1% of errors:")
 for x in result:
     date, parcent = x
     print("   " + str(date) + '   ' + str(parcent) + ' %')
-

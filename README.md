@@ -17,7 +17,7 @@ psql
 \c news
 ```
 
-### create views
+## create views
 
 ```sql
 create view log_day_view as select date(time), count(*) as requests from log group by date(time) order by requestes desc;
@@ -25,4 +25,8 @@ create view log_day_view as select date(time), count(*) as requests from log gro
 
 ```sql
 create view log_day_error_view as select date(time), count(*) as requests from log where status not like '%200%' group by date(time) order by requests desc;
+```
+## running
+```
+$ python report.py
 ```
